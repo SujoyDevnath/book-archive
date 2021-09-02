@@ -5,36 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- boot link -->
+    <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- css link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Css/style.css">
     <title>book-archive</title>
 </head>
 
 <body>
     <!-- input section -->
+    <h1 class="pt-5 text-center">Search your favourite books</h1>
     <section class="d-flex justify-content-center align-items-center py-5">
-        <input type="text" class="form-control w-50" id="input" placeholder="Search your books">
+        <input type="text" class="form-control w-50" id="input" placeholder="Search your favourite books">
         <button class="btn btn-danger" onclick="loadData()">Search</button>
     </section>
 
-    <!-- spinner section -->
-    <section>
+    <!-- search result section -->
+    <section class="pb-5 content">
+        <h3 class="text-center">Search result : <span id="search-result">2000</span></h3>
+    </section>
+
+    <!-- loading section -->
+    <section class="container d-flex justify-content-center align-items-center">
         <div class="spinner-border text-primary" role="status" id="spinner">
             <span class="visually-hidden">Loading...</span>
         </div>
     </section>
 
     <!-- error section -->
-    <section id="error" class="text-center" style="display: none;">
+    <section id="error" class="text-center pt-5 mt-5" style="display: none;">
         <h3>Sorry, book not found</h3>
     </section>
 
     <!-- book section -->
     <section class="container pb-5 content">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container">
+            <!-- default card - 1 -->
             <div class="col">
                 <div class="card h-100">
                     <img src="https://ia802701.us.archive.org/view_archive.php?archive=/18/items/olcovers55/olcovers55-L.zip&file=554106-L.jpg"
@@ -65,9 +72,10 @@
                     </div>
                 </div>
             </div>
+            <!-- default card - 2 -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://ia802701.us.archive.org/view_archive.php?archive=/18/items/olcovers55/olcovers55-L.zip&file=554106-L.jpg"
+                    <img src="https://ia802701.us.archive.org/view_archive.php?archive=/18/items/olcovers55/olcovers55-L.zip&file=554107-L.jpg"
                         class="card-img-top" style="height: 450px;" alt="...">
                     <div class="card-body">
                         <table class="table">
@@ -95,9 +103,10 @@
                     </div>
                 </div>
             </div>
+            <!-- default card - 3 -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://ia802701.us.archive.org/view_archive.php?archive=/18/items/olcovers55/olcovers55-L.zip&file=554106-L.jpg"
+                    <img src="https://ia802701.us.archive.org/view_archive.php?archive=/18/items/olcovers55/olcovers55-L.zip&file=554109-L.jpg"
                         class="card-img-top" style="height: 450px;" alt="...">
                     <div class="card-body">
                         <table class="table">
@@ -128,13 +137,9 @@
         </div>
     </section>
 
-    <!-- search result -->
-    <section class="pb-5 content">
-        <h3 class="text-center">Search result : <span id="search-result">2000</span></h3>
-    </section>
 
     <!-- script link -->
-    <script src="js.js"></script>
+    <script src="Js/script.js"></script>
 </body>
 
 </html>
