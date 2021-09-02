@@ -19,7 +19,7 @@ const loadData = () => {
     const input = document.getElementById('input');
     const inputText = input.value;
     input.value = '';
-    const url = `http://openlibrary.org/search.json?q=${inputText}`;
+    const url = `https://openlibrary.org/search.json?q=${inputText}`;
 
     if (inputText === '') {
         displayError('block');
